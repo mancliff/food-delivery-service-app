@@ -1,0 +1,66 @@
+ion-header {
+  ion-toolbar, ion-item{
+    --background: #f1f5f8;
+    background: #f1f5f8;
+    padding: 0px 10px;
+    
+  }
+  
+  
+
+}
+
+
+ion-content{
+  --background: #13c7be;
+}
+.front-page{
+  margin-top: 5px;
+  border-radius: 14px;
+  
+}
+
+.slides{
+  background: #f1f5f8;
+  padding: 4px 10px 20px 10px;
+  border-radius: 0 0 28px 28px;
+}
+
+ion-card{
+  img{
+    width: 100%;
+  }
+  width: 100%;
+  box-shadow: none;
+  border-radius: 14px;
+  padding: 14px;
+  
+}
+
+
+.poster-col{
+  height: 100px;
+  img{
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+b{
+  margin-top: 5px;
+}
+
+.swiper-slide {
+  transition: .4s all;
+}
+
+.slide-option{
+  margin-top: 75px;
+}
+
+//ionic tabs
+.my-custom-tab{
+  --background: rgba(100,100,100,0.1);
+  border: none;
+}
+

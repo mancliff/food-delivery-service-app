@@ -1,0 +1,94 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons slot="end" (click)="openCart()" #cart>
+        <ion-button>
+          <ion-icon name="cart"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    
+  </ion-toolbar>
+
+  <ion-item lines="none">
+
+  </ion-item>
+</ion-header>
+
+
+
+<ion-content>
+
+  
+  
+ 
+
+<div class="slides ion-margin-botton">
+  
+  <ion-slides class="slide-option" [options]="options">
+    <ion-slide *ngFor="let p of products">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img class="poster" [src]="p.imgUrl"  alt="">
+          </ion-col>
+          <ion-col size="12" class="ion-text-left">
+            
+            <ion-button>add to cart</ion-button>
+          </ion-col>
+        </ion-row>
+        
+        
+      </ion-grid>
+    </ion-slide>
+  </ion-slides> 
+
+</div>
+
+  <!-- <div class="slides ion-margin-botton">
+
+    <ion-slides [options]="slidesOptions">
+      <ion-slide *ngFor="let product of products">
+        <ion-card>
+          
+          <ion-card-content class="ion-text-left">
+            <img [src]="product.imgUrl" style="width:100%"  alt="">
+            <ion-card-title class="ion-margin-bo">{{product.productname}}</ion-card-title>
+            <ion-card-subtitle>{{product.price}}</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+  </div> -->
+
+  <ion-tabs>
+    <ion-tab-bar class="my-custom-tab" slot="bottom">
+      <ion-tab-button tab="">
+        <ion-icon name="home"></ion-icon>
+      
+  
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="software">
+        <ion-icon name="map"></ion-icon>
+       
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about" *ngIf="!isUser">
+        <ion-icon name="person-circle"></ion-icon>
+        
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

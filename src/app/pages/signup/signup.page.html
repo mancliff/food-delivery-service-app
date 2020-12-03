@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/signin">Sign in</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="height:100%;">
+    <ion-row justify-content-center align-items-center style="height:100%;">
+
+      <ion-col size=12 size-sm=10 offset-sm=1 size-md=8 offset-md=2 size-lg=2 size-lg=6 offset-xl=4>
+        <div id="header">
+          <h1>Register</h1>
+        </div>
+
+        <ion-card-content class="i-c-content">
+          <ion-item lines="none">
+          <ion-input type="email" placeholder="Username" [(ngModel)]="username">
+
+          </ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-input type="password" placeholder="password" [(ngModel)]="password">
+  
+            </ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-input type="password" placeholder="confirmPassword" [(ngModel)]="confirmPassword">
+    
+              </ion-input>
+              </ion-item>
+
+            <ion-button color="secondary" expand="block" (click)="signup()">Register</ion-button>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
